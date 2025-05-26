@@ -38,7 +38,7 @@ C_b_LVLH = (2*eta^2 - 1)*eye(3) + 2*(epsilon*epsilon') - 2*eta*epsilonx;
 
 
 %% LVLH to ECI
-[rECI, vECI] = curtis_COEstoRV(h, ecc, RAAN, inc, arg_peri, True_Anomoly, mu_earth);
+[rECI, vECI] = curtis_COEstoRV(h, ecc, RAAN, inc, arg_peri, True_Anomoly, mu_earth); % Function gotten from H. Curtis "Orbital Mechanics for Engineering Students" in Appendix D
 z_LVLH = -rECI/norm(rECI);
 y_LVLH = -cross(rECI, vECI)/norm(cross(rECI, vECI));
 x_LVLH = cross(y_LVLH, z_LVLH);
